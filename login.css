@@ -1,0 +1,79 @@
+html {
+    scroll-behavior: smooth;
+    /* Apenas torna o scroll do Browser mais suave */
+}
+
+body {
+    background-image: url(../Media/Back_EMARKET.png);
+    background-size: 100vw 100vh;
+    /*viewport width e viewport height*/
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font: 40px inherit;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 130px;
+    color: white;
+    transition: 3s ease-in-out;
+}
+
+.login-container {
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* Alterado para linha para colocar elementos lado a lado */
+    align-items: center;
+    text-align: center;
+    /* Ajusta o alinhamento do texto */
+}
+
+.login-container input,
+.login-container button {
+    width: 300px;
+    max-width: 400px;
+    /* Define uma largura máxima para evitar esticamento excessivo */
+    padding: 10px;
+    margin: 10px 5px;
+    /* Adiciona espaço horizontal entre os elementos */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    box-sizing: border-box;
+    /* Garante que padding e border não afetem o tamanho total */
+    transition: 1s ease-in-out;
+}
+
+.login-container button {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+h2:hover {
+    color: purple;
+    transform: scale(1.1);
+    transition: 1s ease-in;
+    /*Faz a transição ease-in em 2s */
+}
+
+.login-container button:hover {
+    background-color: purple;
+    transform: scale(1.1);
+    transition: 0.5s ease-in;
+}

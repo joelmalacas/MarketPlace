@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-MARKET - DASHBOARD</title>
+    <link rel="stylesheet" href="../MarketPlace/css/dashboard.css">
+    <link rel="icon" href="../MarketPlace/Media/informatica.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<script src="../MarketPlace/Scripts/dashboard.js"></script>
+
+<body>
+
+    <div class="dashboard">
+        <div class="sidebar" id="sidebar">
+            <h1 class="fas fa-shopping-cart" onclick="window.location.reload()"> E-MARKET</h1>
+            <ul class="menu">
+                <li><a id="Perfil"><i class="fas fa-user"></i> Meu Perfil</a></li>
+                <li><a id="Promo"><i class="fas fa-tag"></i> Promoções</a></li>
+                <li id="Produto" class="has-submenu">
+                    <a><i class="fas fa-shopping-bag"></i> Produtos <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        <li><a id="Gaming">Gaming</a></li>
+                        <li><a id="Office">Office</a></li>
+                        <li><a id="Android">Android</a></li>
+                        <li><a id="IOS">IOS</a></li>
+                    </ul>
+                </li>
+                <li><a id="Carrinho"><i class="fas fa-shopping-cart"></i> Carrinho</a></li>
+                <li><a id="Pedido"><i class="fas fa-tasks"></i> Pedidos</a></li>
+                <li><a id="Sobre"><i class="fas fa-info-circle"></i> Sobre</a></li>
+                <li><a id="Logout"></a></li>
+                <li><a id="Theme"><i class="fas fa-regular fa-sun"></i></a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                <div class="logo">
+                    <img src="../MarketPlace/Media/account.png" alt="Logo">
+                    <h2 id="Message"></h2>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="Pesquisar" placeholder="Pesquisar">
+                    <button type="submit" id="PesquisaBTN"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="main-content">
+                <!-- Conteúdo da dashboard -->
+            </div>
+
+            <div class="Media">
+                <h1 id="SubTitleMedia" class="fas fa-shopping-cart" onclick="window.location.reload()"> E-MARKET</h1>
+
+                <ul class="social-icons">
+                    <li class="Facebook"><i class="fab fa-facebook fa-2x"></i></li>
+                    <li class="Instagram"><i class="fab fa-instagram fa-2x"></i></li>
+                    <li class="youtube"><i class="fab fa-youtube fa-2x"></i></li>
+                    <li class="linkedin"><i class="fab fa-linkedin fa-2x"></i></li>
+                    <li class="phone"><i class="fas fa-phone fa-2x"></i></li>
+                </ul>
+
+                <footer>
+                    <p class="Copy">Direitos e Políticas Privacidade &copy E-MARKET 2023</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

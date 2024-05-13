@@ -1,0 +1,527 @@
+html {
+    scroll-behavior: smooth;
+    /*Apenas torna o scroll do Browser mais suave*/
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    cursor: default;
+}
+
+h1:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+h1:not(:hover) {
+    cursor: default;
+    transform: scale(1);
+    transition: 0.3s ease-out;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 80%;
+}
+
+.logo img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.logo h2 {
+    margin: 0;
+}
+
+#Message:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+}
+
+#Message:not(:hover) {
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.5s ease-out;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 20px;
+    transition: max-height 0.7s ease-in;
+}
+
+.submenu.active {
+    max-height: 250px;
+    transition: 0.7s ease-in-out;
+}
+
+.submenu li {
+    list-style: none;
+    margin-bottom: 10px;
+    transition: 0.7s ease-in-out;
+}
+
+#Theme {
+    margin-top: 32vh;
+}
+
+.menu li a:hover {
+    background-color: #555;
+}
+
+.menu li a.active {
+    background-color: #555;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    cursor: pointer;
+}
+
+.main-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    /* largura da barra de pesquisa */
+    margin: 20px auto;
+    /* centralizar na página */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    /* ocultar conteúdo que ultrapassa o tamanho da barra de pesquisa */
+}
+
+.search-container input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-container button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-container button i {
+    font-size: 16px;
+    /* tamanho do ícone */
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.2);
+    transition: 0.5s ease-in;
+}
+
+.search-container button:not(:hover) {
+    background-color: #007bff;
+    transform: scale(1.1);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-out;
+}
+
+.card {
+    width: 200px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.card:hover {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transform: scale(1.2);
+    z-index: 2;
+    /*Fica bring to Front (Sobrepõem-se aos outros cards)*/
+    transition: 0.3s ease-out;
+}
+
+.card:not(:hover) {
+    background-color: #f0f0f0;
+    color: black;
+    transform: scale(1);
+    z-index: 1;
+    /*Volta ao normal (deixa de ser "Bring to Front")*/
+    transition: 0.3s ease-in;
+}
+
+.card h3:hover {
+    font-size: 26px;
+    color: orange;
+    transition: 0.2s ease-in-out;
+}
+
+.card h3:not(:hover) {
+    font-size: 14px;
+    color: #666;
+    transition: 0.2s ease-out;
+}
+
+.profile-container {
+    width: 700px;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+button.btn-guardar {
+    width: 98%;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.btn-guardar:hover {
+    background-color: #0056b3;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.Media {
+    background-color: #ccc;
+    color: black;
+    display: block;
+    border-radius: 10px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.social-icons li {
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.social-icons .Facebook:hover {
+    background-color: #007bff;
+    transition: 0.7s ease-in;
+}
+
+.social-icons .Instagram:hover {
+    background-color: #C13584;
+    transition: 0.7s ease-in;
+}
+
+.social-icons .youtube:hover {
+    background-color: red;
+    transition: 0.7s ease-in;
+}
+
+.social-icons .linkedin:hover {
+    background-color: #007bff;
+    transition: 0.7s ease-in;
+}
+
+.social-icons .phone:hover {
+    background-color: #c0c0c0;
+    transition: 0.7s ease-in;
+}
+
+.social-icons .Facebook:not(:hover) {
+    background-color: #333;
+    transition: 0.7s ease-out;
+}
+
+.social-icons .Instagram:not(:hover) {
+    background-color: #333;
+    transition: 0.7s ease-out;
+}
+
+.social-icons .youtube:not(:hover) {
+    background-color: #333;
+    transition: 0.7s ease-out;
+}
+
+.social-icons .linkedin:not(:hover) {
+    background-color: #333;
+    transition: 0.7s ease-out;
+}
+
+.social-icons .phone:not(:hover) {
+    background-color: #333;
+    transition: 0.7s ease-out;
+}
+
+.Media {
+    background-color: #f8f9fa;
+    color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#SubTitleMedia {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons li {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.product-card {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #c0c0c0;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.product-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-details {
+    margin: 20px;
+}
+
+.add-to-cart-button {
+    width: 200px;
+    font-size: 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3;
+}
+
+.card-carrinho,
+.TotalCard-carrinho {
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.carrinho-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carrinho-price {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.carrinho-quantity {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity input {
+    width: 40px;
+    text-align: center;
+}
+
+.carrinho-card-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+}
+
+.carrinho-btn,
+.carrinho-btn-remove {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.btn-finalizar-product {
+    align-self: flex-end;
+    /* Alinha o botão na parte inferior */
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    border-radius: 6px;
+    border-color: transparent;
+}
+
+.btn-remove {
+    background-color: #d52032;
+    color: white;
+    font-size: 20px;
+    border-radius: 6px;
+    border-color: transparent;
+    margin-left: 85px;
+}
+
+.btn-remove:hover {
+    cursor: pointer;
+    background-color: #81121d;
+    transition: 0.7s ease-in;
+}
+
+.btn-remove:not(:hover) {
+    background-color: #d52032;
+    color: white;
+    transition: 0.7s ease-out;
+}
+
+.btn-finalizar-product:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+    transition: 0.7s ease-in;
+}
+
+.btn-finalizar-product:not(:hover) {
+    background-color: #007bff;
+    transition: 0.7s ease-out;
+}

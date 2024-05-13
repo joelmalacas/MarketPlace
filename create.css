@@ -1,0 +1,81 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../Media/background_create.jpeg);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background-color: transparent;
+    color: white !important;
+    padding: 20px;
+    margin-top: 7%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: 2s linear;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    font: 15px arial;
+    text-decoration: none;
+    margin-left: 37%;
+    color: black;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4c7faf;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #28488d;
+    transition: 0.5s;
+}
+
+input[type="submit"]:not(:hover) {
+    background-color: #4c7faf;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: rgb(248, 10, 248);
+    transform: scale(1.1);
+    transition: 0.5s ease-in;
+}
+
+a:not(:hover) {
+    color: white;
+    transform: scale(1);
+    transition: 0.5s ease-out;
+}
